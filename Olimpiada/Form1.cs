@@ -28,12 +28,14 @@ namespace Olimpiada
 
 
         }
-
+        public string StringConnection = "Server=localhost;Database=jak;Trusted_Connection=True";
         // функция подключения к бд 
         void StringCoonection()
         {
-            string StringConnection = "Server=localhost;Database=jak;Trusted_Connection=True";
+             
             string command = "SELECT *  FROM Sport";
+
+           
 
             using (SqlConnection sqlConnection = new SqlConnection(StringConnection))
             {
@@ -125,8 +127,9 @@ namespace Olimpiada
 
             private void ADD_Click(object sender, EventArgs e)
             {
+                Form1 form1 = new Form1();
                 // Обработка нажатия на элемент меню "О программе"
-                Form3 form3 = new Form3();
+                Form3 form3 = new Form3(form1);
                 form3.Show();
             }
 
