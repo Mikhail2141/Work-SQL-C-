@@ -109,7 +109,7 @@ namespace Olimpiada
                 helpMenu.DropDownItems.Add(aboutProgramMenuItem);
 
                 addButton.Click += new EventHandler(ADD_Click);
-
+                deleteButton.Click += new EventHandler(DELETE_Click);
 
 
 
@@ -131,6 +131,13 @@ namespace Olimpiada
                 // Обработка нажатия на элемент меню "О программе"
                 Form3 form3 = new Form3(form1);
                 form3.Show();
+            }
+
+            private void DELETE_Click (object sender,  EventArgs e)
+            {
+                Form1 form1 = new Form1();
+                Form4 form4 = new Form4(form1);
+                form4.Show();
             }
 
 
