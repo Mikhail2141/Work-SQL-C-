@@ -69,9 +69,9 @@ namespace Olimpiada
                  
                  
 
-                reportsMenu.DropDownItems.Add("Таблица медального зачета");
+                 
                 reportsMenu.DropDownItems.Add("Медалисты");
-                reportsMenu.DropDownItems.Add("Статистика");
+                
                  
                 
                 menuStrip.Items.Add(reportsMenu);
@@ -84,13 +84,13 @@ namespace Olimpiada
                 ToolStrip toolStrip = new ToolStrip();
                 ToolStripButton addButton = new ToolStripButton("Добавить");
                 ToolStripButton deleteButton = new ToolStripButton("Удалить");
-                ToolStripButton editButton = new ToolStripButton("Изменить");
+                //ToolStripButton editButton = new ToolStripButton("Изменить");
              
 
                 // Добавление кнопок на панель инструментов
                 toolStrip.Items.Add(addButton);
                 toolStrip.Items.Add(deleteButton);
-                toolStrip.Items.Add(editButton);
+               // toolStrip.Items.Add(editButton);
                 f1.Controls.Add(toolStrip);
 
                 // Создание таблицы для отображения данных
@@ -111,7 +111,7 @@ namespace Olimpiada
                 addButton.Click += new EventHandler(ADD_Click);
                 deleteButton.Click += new EventHandler(DELETE_Click);
 
-
+                reportsMenu.Click += new EventHandler(MEDAL_Click);
 
 
             }
@@ -139,14 +139,22 @@ namespace Olimpiada
                 Form4 form4 = new Form4(form1);
                 form4.Show();
             }
-
+            
+             private void MEDAL_Click(object sender, EventArgs e)
+            {
+                Form1 form1 = new Form1();
+                Form6 form6 = new Form6(form1);
+                form6.Show();
+            }
 
         }
 
-        
-
-
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1(); 
+            Form5 form5 = new Form5(form1);
+            form5.Show();
+        }
     }
 }
 

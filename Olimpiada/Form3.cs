@@ -75,13 +75,13 @@ namespace Olimpiada
                     GenerateFormForTable(new TableDefinition("Sportsmens", "FIO", "Data", "Country"));
                     break;
                 case 1:
-                    GenerateFormForTable(new TableDefinition("Olimpiada", "Data", "Season", "City", "Host Country"));
+                    GenerateFormForTable(new TableDefinition("Olimpiada", "Data", "Season", "City", "Host"));
                     break;
                 case 2:
                     GenerateFormForTable(new TableDefinition("Sport", "Name"));
                     break;
                 case 3:
-                    GenerateFormForTable(new TableDefinition("Countries", "Name", "gold medals", "silver medals", "bronze medals", "total medals"));
+                    GenerateFormForTable(new TableDefinition("Countries", "Name", "gold", "silver", "bronze", "total"));
                     break;
             }
         }

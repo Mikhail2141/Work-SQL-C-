@@ -35,7 +35,11 @@
             // 
             // menuStrip1
             // 
- 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1074, 24);
+            this.menuStrip1.TabIndex = 4;
             // 
             // label1
             // 
@@ -55,7 +59,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Просмотр Базы данных ";
             this.button1.UseVisualStyleBackColor = true;
-            
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
